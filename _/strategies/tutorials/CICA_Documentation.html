@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    margin: 10px 13px 10px 13px;
+}
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+@media screen and (min-width: 768px) {
+    body {
+        width: 748px;
+        margin:10px auto;
+    }
+}
+</style>
+<title>Title</title>
+</head>
+<body>
+<h1>Title</h1>
+
+<h2>Title 2</h2>
+
+<h6>H6</h6>
+
+<h2>Title</h2>
+
+<p>This is a paragraph.</p>
+
+<p>A quick fox jumps over a lazy dog.</p>
+
+<pre><code>for (NSString *string in allStrings)
+    NSLog(string);
+
+
+    /Users/marsella/Desktop/Screen Shot 2012-03-27 at 10.32.01 AM.png
+</code></pre>
+
+<p><a href="http://www.google.com">Click me</a></p>
+
+<p><img src="1707.jpg" alt="Alt text" /></p>
+
+<hr />
+
+<h2>GeoPhotos</h2>
+
+<h3>Requirements</h3>
+
+<p>OS X 10.7</p>
+
+<p>Xcode 4.3.2+</p>
+
+<p>iOS 5</p>
+
+<h3>What you will learn</h3>
+
+<ul>
+<li>How to use manage version control GIT repository</li>
+<li>How to geolocate entities</li>
+<li>How to create a model</li>
+<li>How to import open source</li>
+</ul>
+
+
+<h3>SOP</h3>
+
+<ol>
+<li>Create a new Xcode project GeoPhotos Storyboard ARC and git options</li>
+<li>Drag out a Split View Controller from the inspector objects</li>
+<li>Add a new file NSObject (PhotoManager model)</li>
+<li>Fetch list of photos (must be geotagged with entity search term) ideally with an asychronous block call
+Keep the list in memory (cache?)
+Make the data publically accessible
+Cache the photo if memory is sufficient. If not, purge cache
+(think about adding convenience methods to call classes)
+Might need to define relevant global variables such as latitude and longitude
+Create singlet + (id)sharedManager;</li>
+<li>Drag in Stanford flickr FlickrAPIKey (apply for flickr key) and FlickrFetcher.h/m</li>
+<li> Add CoreLocation, Mapkit and CoreGraphics frameworks</li>
+<li>Modify the iPad storyboard</li>
+<li>Should compile without errors</li>
+<li>Add Entity Annotations and Photo classes</li>
+<li> Add new file CalloutViewController</li>
+<li> Add HJCache</li>
+<li> Add MKMapView+ZoomLevel</li>
+<li> Wire up the iPhone storyboard</li>
+</ol>
+
+
+<p> References:
+ Stanford
+ HJCache
+MKMapView+ZoomLevel http://troybrant.net/blog/2010/01/set-the-zoom-level-of-an-mkmapview/
+ /tmp/Xcode.png</p>
+
+<h2>Tutorial</h2>
+
+<ol>
+<li>Create a new Xcode project (Menu > New > New File)
+<img src="1010_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Choose options for new Xcode project
+<img src="1020_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Save the Under a Dropbox/Projects folder with version control.
+<img src="1030_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>The project setting should resemble <img src="1035_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Compile the project by clicking the run button&ndash;the project should not give any errors and show a blank white screen in the iPad simulator).</li>
+<li>Set up version control for the project <img src="1040_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Make an initial git commit <img src="1050_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Create a Class and External folders, rename the storyboard files and sort files into their respective categories. <img src="1060_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Select the renamed iPad and iPhone storyboard files in Targets > Summary tab <img src="1070_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Make a git commit <img src="1080_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Add graphical frameworks&ndash;the CoreLocation framework to determine the user’s location and MapKit to manage the graphical aspect of displaying a Google map&ndash;under GeoFotos > Targets > Build Phases <img src="1090_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Drag out a Split View Controller from the inspector object library <img src="1100_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Select the Detail View Controller <img src="1110_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li>Embedd the Detail View Controller in a navigation controller (Menu > Editor > Embed in > Navigation controller ) then add a Map View <img src="1120_CICA_Tutorial.png" alt="Xcode Single Window template" /></li>
+<li></li>
+</ol>
+
+</body>
+</html>

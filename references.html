@@ -1,0 +1,292 @@
+<!-- 
+
+ 
+	
+	_|_|_|    _|_|_|_|    _|_|_|  _|_|_|_|  _|_|_|_|_|  
+	_|    _|  _|        _|        _|            _|      
+	_|_|_|    _|_|_|      _|_|    _|_|_|        _|      
+	_|    _|  _|              _|  _|            _|      
+	_|    _|  _|_|_|_|  _|_|_|    _|_|_|_|      _|      
+	
+                                                                                                            
+	The HTML5 Reset Template Set						:: http://html5reset.org
+	The site is copyright (c) 2011 Monkey Do, LLC 		:: http://monkeydo.biz
+	
+	The templates are free and released under the BSD license; if you like them, please pass them along.
+
+
+-->
+
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!-- the "no-js" class is for Modernizr. -->
+
+<head id="www-html5reset-org" data-template-set="html5-reset">
+
+	<meta charset="utf-8">
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>HTML5 Reset :: A simple set of templates for any project</title>
+	
+	<meta name="title" content="HTML5 Reset :: A simple set of templates for any project">
+	<meta name="description" content="A simple set of HTML5 and CSS best practices to get your HTML5 project off on the right foot. " />
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+	
+	<meta name="google-site-verification" content="eZEnJYptPgEDsL202PwuIwmQWxXblu5t2O9XZ8SizxI" />
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+	
+	<meta name="author" content="Tim Murtaugh, Monkey Do, LLC" />
+	<meta name="Copyright" content="Copyright Monkey Do, LLC 2011. All Rights Reserved." />
+	
+	<!-- Dublin Core Metadata : http://dublincore.org/ -->
+	<meta name="DC.title" content="HTML5 Reset" />
+	<meta name="DC.subject" content="A simple set of best practices to get your HTML5 project off on the right foot." />
+	<meta name="DC.creator" content="Monkey Do, LLC" />
+	
+	<!--  Mobile Viewport Fix
+	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+	device-width : Occupy full width of the screen in its current orientation
+	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+	-->
+	<meta name="viewport" content="width=device-width; initial-scale=.9;">
+	
+	<link rel="shortcut icon" href="_/img/favicon.png">
+	<!-- This is the traditional favicon.
+		 - size: 16x16 or 32x32
+		 - transparency is OK
+		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
+		 
+	<link rel="apple-touch-icon" href="_/img/apple-touch-icon-precomposed.png">
+	<!-- The is the icon for iOS's Web Clip.
+		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+	
+	<!-- CSS: screen, mobile & print are all in the same file -->
+	<link rel="stylesheet" href="_/css/style.css">
+	
+	<!-- TypeKit -->
+	<script src="http://use.typekit.com/lvd3bfg.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	
+	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
+	<script src="_/js/modernizr-1.7.min.js"></script>
+
+</head>
+
+<body id="www-html5reset-org">
+
+<div class="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
+
+	<header>
+	
+		<h1><a href="/">HTML5 <strong>Reset</strong></a> <div id="updated">v2</div></h1>
+		
+		<nav>
+		
+			<ol>
+				<li><a href="#about">About v2</a></li>
+				<li><a href="#wordpress">WordPress Theme</a></li>
+				<li><a href="#code">The Code</a></li>
+				<li><a href="#download">Get It</a></li>
+				<li><a href="#contact">Contribute</a></li>
+				<li><a href="#acknowledgements">Acknowledgements</a></li>
+			</ol>
+		
+		</nav>
+	
+	</header>
+	
+	<article id="why">
+	
+		<h1>Why?</h1>
+		
+		<p>Like a lot of developers, we start every HTML project with the same set of HTML and CSS files. We've been using these files for a long time and have progressively added bits and pieces to them as our own personal best practices have evolved.</p>
+		
+		<p>Now that modern browsers are starting to support some of the really useful parts of HTML5 and CSS3, it's time for our best practices to catch up, and we thought we'd put our files out there for everyone to use. By no means do we see this as the One True Way to start every project, but we think it's a good starting place that anyone can make their own.</p>
+	
+		<h2 id="about">About Version 2</h2>
+		
+		<figure><img src="_/img/tree-before-after.png" alt="A before and after view of the file structure." /></figure>
+		
+		<p>The biggest change is to our stylesheets. We've been using the browser-specific style sheets less and less often in our work so we eliminated them, which saves us the overhead of additional downloads. In their place we're now using Paul Irish's conditional comments technique to add IE-specific classes to the HTML tag &#8212; creating IE-specific styles is now as easy as <code>.ie body { IE styles go here }</code>.</p>
+		
+		<p>In the same spirit, we've also moved our print styles into the main stylesheet and added a mobile/small display style block (including blocks for orientation). The end result is a faster-downloading page.</p>
+		
+		<p>Also in the sprirt of simplifiction, we've eliminated the "Bare Bones" version and are now only offering one set of fully-commented files. (We assume everyone is tweaking the files for their own use anyway, so go ahead and strip the comments out at your leisure!)</p>
+		
+		<p>Finally, and sigificantly, we're hosting <a href="https://github.com/murtaugh/HTML5-Reset">the files on GitHub</a> (yay!) for better issue and version tracking.</p>
+		
+		<h2 id="wordpress">The WordPress Theme</h2>
+		
+		<figure><img src="_/img/wp-theme-poster.png" alt="The HTML5 Reset WordPress Theme Poster" /></figure>
+		
+		<p>With the assistance of <a href="http://digwp.com">Digging Into WordPress</a> and their <a href="http://digwp.com/2010/02/blank-wordpress-theme/">BLANK WordPress Theme</a>, we're excited to present the HTML5 Reset WordPress Theme &#8212; a style-free theme designed to help get your custom WordPress project off the ground. The theme includes:</p>
+		
+		<ol>
+			<li>Semantic HTML5 markup</li>
+			<li>Starter CSS declarations for the basic WordPress elements</li>
+			<li>A widget-ready sidebar</li>
+			<li>jQuery, Modernizr and Analytics built in</li>
+		</ol>
+		
+		<p>Oh &#8212; and we've gone ahead and made the single post pages conform to the <a href="http://microformats.org/wiki/hnews">hNews Microformat</a>, for better integration with services like Google News and <a href="http://readability.com" data-twitter="readability">Readability</a>.
+		
+		<p>The theme is brand new, and probably not fully baked yet; we hope you've got ideas for making it better and help us build a best-of-breed starting point for any WordPress developer. <a href="https://github.com/murtaugh/HTML5-Reset-Wordpress-Theme/issues">Talk to us on GitHub.</a></p>
+	
+	</article>
+	
+	<article id="code">
+	
+		<h1>The Code</h1>
+		
+		<p>What's in the package is a folder structure representing an embryo of a web site. (What's in the WordPress package is an embyro of a WordPress Theme.)</p>
+		
+		<p>There is an HTML file that contains a rudimentary HTML5 document structure, with all the everyday stuff like <code>title</code>, <code>header</code>, <code>footer</code>, etc. It uses conditional comments to add IE-specific classes to the <code>html</code> tag, and calls in some popular JavaScript tools like jQuery and Modernizr. We've also included the standard Google Analytics snippet &#8212; have you ever launched a site, then scrambled because you forgot to stick this in? We have, but no more!</p>
+		
+		<p>All supporting files are stored in a parent &ldquo;<code>_</code>&rdquo; folder, which keeps the view in our file manager uncluttered. We could call it something like &ldquo;<code>assets</code>,&rdquo; but we prefer to give it a name that ensures it stays at the top of the list, no matter what editor we're using. (Oddly, Transmit puts folders at the top but Coda doesn't.)</p>
+		
+		<p>In the <code>style.css</code> file are styles designed to reduce the visual output in any browser to its most basic state. This frees you from the annoyance of overcoming the native styling that each browser wants to apply to HTML elements such as <code>h1</code>, <code>p</code>, and <code>ul</code>. From this starting point it's very easy to establish your own standards for type size, margins, and other measurements.</p>
+		
+		<p>There are also a lot of other goodies like fixes for IE (image resizing and flickering), a <code>.clickable</code> class, some fun things for Mobile Safari, <i>et cetera</i>, <i>et cetera</i>. Make sure to read through all the comments!</p>
+	
+		<h2 id="download">Download the Templates &#8212; Now on GitHub!</h2>
+		
+		<ul class="links">
+			<li>The Main Reset Files: <a href="https://github.com/murtaugh/HTML5-Reset">Visit the repository page</a>, or download <a href="https://github.com/murtaugh/HTML5-Reset/zipball/master">the .zip archive</a> directly.</li>
+			<li>The WordPress Theme: <a href="https://github.com/murtaugh/HTML5-Reset-Wordpress-Theme">Visit the repository page</a>, or download <a href="https://github.com/murtaugh/HTML5-Reset-Wordpress-Theme/zipball/master">the .zip archive</a> directly.</li>
+		</ul>
+	
+	</article>
+	
+	<hr>
+	
+	<article id="contact">
+	
+		<h1>Contribute</h1>
+		
+		<p>Surely we missed something / forgot your favorite technique / did something stupid. Perhaps the semantics aren't up to snuff, or you've found a new technique that should be included. We'd love for these documents to evolve, so please let us know what you think via GitHub.</p>
+		
+		<p>You might also consider <a href="http://twitter.com/html5reset">following us on Twitter</a> to keep on top of updates and new releases.</p>
+	
+	</article>
+	
+	<hr>
+	
+	<article id="acknowledgements">
+	
+		<h1>Acknowledgements</h1>
+		
+		<p>We owe thanks to <a href="http://meyerweb.com/" data-twitter="meyerweb">Eric Meyer</a>, <a href="http://unstoppablerobotninja.com/" data-twitter="beep">Ethan Marcotte</a>, <a href="http://twitter.com/mpaige" data-twitter="mpaige">Michael Paige</a> and <a href="http://html5doctor.com/" data-twitter="html5doctor">HTML5 Doctor</a> for their work and assistance. Big ups go to <a href="http://alistapart.com" data-twitter="alistapart">A List Apart</a>, as well as Jeremy Keith's fantastic primer <a href="http://books.alistapart.com/product/html5-for-web-designers" data-twitter="abookapart">HTML5 for Web Designers</a>.</p>
+		
+		<p>Extra thanks go to <a href="http://chriscoyier.net/" data-twitter="chriscoyier">Chris Coyier</a> and <a href="http://perishablepress.com/" data-twitter="perishable">Jeff Starr</a> from <a href="http://digwp.com/">Digging into WordPress</a> for letting us use their blank theme as a starting point for ours.</p>
+
+		<p>We should also add that <a href="http://paulirish.com" data-twitter="paul_irish">Paul Irish</a> is someone that anyone who works on the client side should be paying attention to. A good number of the CSS bits and pieces we're using were discovered through him.</p>
+		
+		<h2>Licensing</h2>
+		
+		<p>Some of this is original, much of it is not. In order to respect the original sources, we have chosen to release these templates under the <a href="http://creativecommons.org/licenses/BSD/">BSD license</a>.</p>
+		
+		<h2>Milestones / Changes (v2)</h2>
+		
+		<ul>
+			<li><time>2011.04.13</time> Released v2.</li>
+			<li><time>2011.04.13</time> The first bug caught by Paul Irish: fixed the un-escaped <code>.clearfix</code> content</li>
+			<li><time>2011.04.12</time> Removed the conditional, IE-specific style sheets; switched to conditional classes on the <code>html</code> tag.</li>
+			<li><time>2011.04.12</time> Added mobile, print and rotation style blocks to <code>style.css</code>.</li>
+			<li><time>2011.04.12</time> Switched from the <code>.mod</code> float clearer to <code>.clearfix</code>.</li>
+			<li><time>2011.04.12</time> Added a number of other improvements to <code>style.css</code></li>
+			<li><time>2011.04.12</time> Reverted to the official Google Analytics snippet.</li>
+			<li><time>2011.04.12</time> Updated Modernizr to version 1.7.</li>
+		</ul>
+		
+		<h2>Milestones / Changes (v1)</h2>
+		
+		<ul>
+			<li><time>2010.11.19</time> Upgraded reset.css the <a href="http://html5doctor.com/html-5-reset-stylesheet/" data-twitter="html5doctor">latest version</a></li>
+			<li><time>2010.11.19</time> Updated Modernizr to version 1.6</li>
+			<li><time>2010.11.19</time> Added Mathias Bynens' <a href="http://mathiasbynens.be/notes/async-analytics-snippet">optimized asynchronous Google Analytics snippet</a></li>
+			<li><time>2010.11.19</time> Updated the jQuery call to point to a specific version, as well as adding a local fallback if Google's version is unavailable.</li>
+			<li><time>2010.11.19</time> Added the <code>viewport</code> meta tag — albeit commented out.</li>
+			<li><time>2010.09.15</time> Added <a href="http://www.phpied.com/conditional-comments-block-downloads/" data-twitter="stoyanstefanov">phpied.com's</a> conditional comment fix (see it on line 10 of the Kitchen Sink version)</li>
+			<li><time>2010.08.17</time> Changed <code>section</code> to <code>div.wrapper</code></li>
+			<li><time>2010.08.17</time> Fixed some typos</li>
+			<li><time>2010.08.17</time> Changed the name of the "<code>-</code>" folder to "<code>_</code>"</li>
+			<li><time>2010.08.17</time> Removed the Typekit body font from this page</li>
+			<li><time>2010.08.10</time> The Google Analytics note has been moved into the <code>head</code></li>
+			<li><time>2010.08.10</time> The main jQuery file is now called from Google's server instead of jQuery's</li>
+			<li><time>2010.08.10</time> Fixed improperly closed <code>h2</code> tags</li>
+			<li><time>2010.08.10</time> Added <code>:focus {outline: 1;}</code> for better accessbility</li>
+			<li><time>2010.08.10</time> Replaced original reset.css with the <a href="http://html5doctor.com/html-5-reset-stylesheet/" data-twitter="html5doctor">HTML5 Doctor version</a></li>
+			<li><time>2010.08.10</time> Added <code>small</code> to the footer text</li>
+			<li><time>2010.08.10</time> Added BSD licensing information</li>
+			<li><time>2010.08.09</time> Version 1.0 release</li>
+		</ul>
+	
+	<hr>
+		
+		<h2>Influential Projects & Articles</h2>
+		
+		<ul class="links">
+			<li>A List Apart's <a href="http://www.alistapart.com/articles/responsive-web-design/">&ldquo;Responsive Web Design&rdquo;</a> by Ethan Marcotte</li>
+			<li>The <a href="http://www.modernizr.com" data-twitter="modernizr">Modernizr</a> script</li>
+			<li>Ethan Marcotte's <a href="http://unstoppablerobotninja.com/entry/fluid-images/">&ldquo;Fluid Images&rdquo;</a></li>
+			<li>Apple's <a href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariWebContent/Introduction/Introduction.html#//apple_ref/doc/uid/TP40002051">Safari Web Content Guide</a></li>
+			<li>Paul Irish and <a href="http://nimbupani.com/" data-twitter="nimbupani">Divya Manian</a>'s <a href="http://html5boilerplate.com">HTML5 Boilerplate</a> (similar in function, but very different in scope to HTML5 Reset).</li>
+			<li>Paul Irish and <a href="http://farukat.es/" data-twitter="kurafire">Faruk Ateş</a>' <a href="http://www.modernizr.com/">Modernizr</a></li>
+			<li>QuirksMode.org's <a href="http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html">&ldquo;A pixel is not a pixel is not a pixel&rdquo;</a></li>
+			<li>HTML5 Doctor's <a href="http://html5doctor.com/html-5-reset-stylesheet/">HTML5 Reset Stylesheet</a></li>
+		</ul>
+	
+	</article>
+	
+	<footer>
+		
+		<p>
+			<a href="http://monkeydo.biz"><img src="_/img/md-logo.png" alt="" /></a>
+			<small>
+				Copyright 2011 <a href="http://monkeydo.biz" data-twitter="monkeydobiz">Monkey Do, LLC</a>. All Rights Reserved.<br>
+				<a href="http://twitter.com/html5reset">@html5reset</a> <a href="http://twitter.com/monkeydobiz">@monkeydobiz</a> <a href="http://twitter.com/murtaugh">@murtaugh</a> <a href="http://twitter.com/mikepick">@mikepick</a>
+			</small>
+		</p>
+		
+	</footer>
+
+</div>
+
+<!-- here comes the javascript -->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="_/js/jquery-1.5.1.min.js"><\/script>')</script>
+
+<!-- this is where we put our custom functions -->
+<script src="_/js/functions.js"></script>
+
+<!-- Asynchronous google analytics; this is the official snippet.
+	 Replace UA-XXXXXX-XX with your site's ID. -->
+	 
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-615784-22']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
